@@ -96,8 +96,6 @@ I used [Claude Code](https://claude.ai/claude-code) throughout this project.
 - **Code review** — asked for a full project review against the README requirements to make sure nothing was missed before submitting.
 - **Concept clarification** — used it to understand tradeoffs in the code decisions rather than just getting copy-paste solutions.
 
-What worked well: having it review finished work rather than generate it. The learning came from building it myself and using AI as a reviewer.
-
 ## Author
 
 - Frontend Mentor - [@ezeed](https://www.frontendmentor.io/profile/yourusername)
