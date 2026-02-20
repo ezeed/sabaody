@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/assets/fonts/Sora/Sora-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+@theme {
+  --font-display: "Sora", sans-serif;
+}
+
+
