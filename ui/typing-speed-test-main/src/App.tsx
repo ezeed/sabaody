@@ -53,7 +53,7 @@ function App() {
           endType={endType}
         />
       ) : (
-        <div className="sm:px-45">
+        <main className="sm:px-45">
           <div className="flex flex-col justify-between pb-3 sm:flex-row">
             <SessionInfo
               stats={stats}
@@ -103,7 +103,7 @@ function App() {
               </button>
             </div>
           )}
-        </div>
+        </main>
       )}
     </div>
   );

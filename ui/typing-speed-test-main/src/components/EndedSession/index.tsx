@@ -51,7 +51,7 @@ export const EndedSession = ({
 }: EndedSessionProps) => {
   const { description, icon, retryBtnText, title } = endScenario[endType];
   return (
-    <div className="relative flex w-full flex-1 flex-col overflow-hidden">
+    <main className="relative flex w-full flex-1 flex-col overflow-hidden">
       {/* main stats */}
       <div className="flex w-full flex-col justify-around sm:flex-row">
         {endType !== EndTypes.newRecord && (
@@ -123,6 +123,6 @@ export const EndedSession = ({
           <PatternConfetti className="hidden sm:absolute sm:bottom-0 sm:block sm:w-full" />
         </div>
       )}
-    </div>
+    </main>
   );
 };

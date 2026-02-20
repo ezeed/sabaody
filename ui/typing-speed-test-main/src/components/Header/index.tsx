@@ -7,6 +7,7 @@ export const Header = ({ record }: { record?: number }) => {
     <header className="flex justify-between p-4 sm:px-45 sm:pt-10 sm:pb-15">
       <LogoLarge className="hidden sm:block" />
       <LogoSmall className="sm:hidden" />
+      <h1 className="sr-only">Typing Speed Test</h1>
       <div className="flex items-center gap-2 text-neutral-400">
         <PersonalBest width={20} />
         <span className="hidden sm:block">Personal</span>
