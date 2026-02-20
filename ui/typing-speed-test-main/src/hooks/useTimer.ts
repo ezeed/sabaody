@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { GameStatus, Mode } from '../types';
 
+// TECH-DEBT use one single interval for both needed values
 export const useTimer = ({
   initialSeconds,
   gameStatus,
