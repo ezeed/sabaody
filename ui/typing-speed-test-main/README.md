@@ -4,16 +4,18 @@ This is a solution to the [Typing Speed Test challenge on Frontend Mentor](https
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
+- [Frontend Mentor - Typing Speed Test solution](#frontend-mentor---typing-speed-test-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [AI Collaboration](#ai-collaboration)
+  - [Author](#author)
 
 ## Overview
 
@@ -37,12 +39,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![screenshot](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/ezeed/sabaody/tree/main/ui/typing-speed-test-main
+- Live Site URL: https://typing-speed-record.vercel.app/
 
 ## My process
 
@@ -98,6 +100,6 @@ What worked well: having it review finished work rather than generate it. The le
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- LinkedIn - [Add your LinkedIn here]
-- GitHub - [Add your GitHub here]
+- Frontend Mentor - [@ezeed](https://www.frontendmentor.io/profile/yourusername)
+- LinkedIn - https://www.linkedin.com/in/ezequielcabrera
+- GitHub - https://github.com/ezeed
