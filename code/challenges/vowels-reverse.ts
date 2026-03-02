@@ -1,4 +1,4 @@
-import { runTests, TestSuite } from './utils/run';
+import { runTests, TestType } from './utils/run';
 
 /*
 Description: 
@@ -40,7 +40,7 @@ function flippedy(str: string) {
 //   ].join(' ');
 // }
 
-const testCases: TestSuite[] = [
+const testCases: TestType[] = [
   {
     actual: flippedy('cat and mice'),
     expected: 'cat dna mice',

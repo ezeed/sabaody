@@ -5,7 +5,7 @@ Write a function that zooms in by an integer factor k >= 2 by turning each cell 
 returning the bigger grid.
 */
 
-import { runTests, TestSuite } from './utils/run';
+import { runTests, TestType } from './utils/run';
 
 // ==========================================
 // YOUR ORIGINAL SOLUTION (working but complex)
@@ -84,7 +84,7 @@ const result3 = [
   [2, 2, 2],
 ];
 
-const testsParams: TestSuite[] = [
+const testsParams: TestType[] = [
   { name: 'TEST 1', actual: zoom1, expected: result1 },
   { name: 'TEST 2', actual: zoom2, expected: result2 },
   { name: 'TEST 3', actual: zoom3, expected: result3 },
