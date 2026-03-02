@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import levels from '../../../data.json';
 import { Difficulty, GameStatus, StatsType } from '../../types';
 
@@ -15,6 +15,8 @@ function getRandom(max: number) {
   return Math.floor(Math.random() * max);
 }
 
+export const TYPING_INPUT_ID = 'typing-input';
+
 export const TypeTracker = ({
   difficulty,
   updateStats,
@@ -28,6 +30,8 @@ export const TypeTracker = ({
     // Pick random text and replace special character
     return levels[difficulty][randNum]?.text.replace(/—/g, '-').split('') || [];
   }, [difficulty]);
+
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const [current, setCurrent] = useState(0);
   const [errors, setError] = useState(() => new Set<number>());
@@ -101,12 +105,36 @@ export const TypeTracker = ({
     };
   }, [handleGlobalKeyDown]);
 
+  const handleFocus = () => {
+    if (status === GameStatus['not-started']) {
+      onStart();
+    }
+  };
+
+  // Refocus input after onStart causes a re-render (keeps keyboard open on mobile)
+  useEffect(() => {
+    if (status === GameStatus.started) {
+      inputRef.current?.focus();
+    }
+  }, [status]);
+
   return (
     <div>
+      <input
+        id={TYPING_INPUT_ID}
+        ref={inputRef}
+        className="absolute opacity-0 pointer-events-none"
+        aria-hidden="true"
+        onFocus={handleFocus}
+        autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
+        spellCheck={false}
+      />
       <p className="text-xl text-neutral-400 sm:text-3xl">
         {randomPick.map((char, i) => (
           <span
-            key={crypto.randomUUID()}
+            key={i}
             className={`${errors.has(i) ? 'text-red-600 underline' : current > i ? 'text-green-500' : 'text-neutral-400'} ${i === current && 'animate-pulse bg-neutral-100/50'}`}
           >
             {char}

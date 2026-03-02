@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TypeTracker } from './components/TypingTracker';
+import { TypeTracker, TYPING_INPUT_ID } from './components/TypingTracker';
 import { Difficulty, GameStatus, Mode } from './types';
 import { Settings } from './components/Settings/Index';
 
@@ -83,13 +83,12 @@ function App() {
             <div
               className={`${gameStatus !== 'not-started' && 'invisible'} absolute inset-0 flex flex-col items-center justify-center gap-3`}
             >
-              <button
-                onClick={handleOnStart}
-                className="cursor-pointer rounded-md bg-blue-500 px-4 py-2 focus:border-2 focus:border-neutral-900 focus:shadow-[0px_0px_2px_2px] focus:shadow-blue-400"
-                type="button"
+              <label
+                htmlFor={TYPING_INPUT_ID}
+                className="cursor-pointer rounded-md bg-blue-500 px-4 py-2"
               >
                 Start Typing Test
-              </button>
+              </label>
               <p>Or click the text and start typing</p>
             </div>
           </div>
